@@ -2,6 +2,9 @@ using Optim
 using Plots
 using Statistics
 using NLsolve
+using TickTock
+
+tick()
 
 ###
 ### Alternative method for iterating over the value function
@@ -101,8 +104,8 @@ dNss = SteadyState.zero[5];
 
 # Algorithm related parameters
 iIter = 15000;
-iGridPointsK = 3;
-iGridPointsN = 2;
+iGridPointsK = 30;
+iGridPointsN = 20;
 iToler = 10e-6;
 
 # Constructing the grid
@@ -311,3 +314,5 @@ end
 
 #xlabel!("N")
 #ylabel!("K")
+
+tock()
